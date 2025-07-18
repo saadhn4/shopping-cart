@@ -16,7 +16,7 @@ const App = () => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === product.id);
     if (index === -1) return;
     const newCart = [...cartItems];
-    cartItems.splice(index, 1);
+    newCart.splice(index, 1);
     setCartItems(newCart)
   }
 
