@@ -10,8 +10,13 @@ const App = () => {
   }
 
   function removeFromCart(product) {
-    const newCart = cartItems.filter((cartItem) => cartItem.id != product.id);
-    setCartItems(newCart);
+    // buggy method where u cant remove 2 or more of the same product
+    // const newCart = cartItems.filter((cartItem) => cartItem.id != product.id);
+    // setCartItems(newCart);
+    const index = cartItems.findIndex((cartItem) => cartItem.id === product.id);
+    if (index === -1) return;
+    const newCart = [...cartItems];
+    cartItems.splice(index, 1);
   }
 
   return (
