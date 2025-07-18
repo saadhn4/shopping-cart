@@ -1,3 +1,4 @@
+
 export const Cart = ({ cartItems, removeFromCart }) => {
   let totalPrice = 0;
   cartItems.forEach((cartItem) => (totalPrice += cartItem.price));

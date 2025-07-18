@@ -2,9 +2,9 @@ import products from "../items";
 
 export const ProductDisplay = ({ addToCart }) => {
   return (
-    <div>
+    <div className="mb-3">
       <h1 className="font-bold text-lg mb-3">Products</h1>
-      <div className="flex gap-x-4 mb-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {products.map((product) => {
           return (
             <div
@@ -12,7 +12,7 @@ export const ProductDisplay = ({ addToCart }) => {
               className="w-full flex flex-col justify-between md:w-[150px] h-[150px] shadow-lg p-3 rounded-lg border-black border"
             >
               <div>
-                <p className="h-[25px]">{product.name}</p>
+                <p className="h-[25px] sm:text-[13px] text-sm sm:text-xs md:text-base">{product.name}</p>
                 <p>Rs: {product.price}</p>
               </div>
               <div>

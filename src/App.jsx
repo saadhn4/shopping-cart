@@ -18,7 +18,7 @@ const App = () => {
     <div className="h-screen flex flex-col justify-center items-center px-2">
       <h1 className="text-xl font-bold mb-3">🛒 Shopping Cart</h1>
       <ProductDisplay addToCart={addToCart} />
-      <Cart cartItems={cartItems} removeFromCart={removeFromCart}/>
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
     </div>
   );
 };
