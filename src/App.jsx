@@ -17,6 +17,7 @@ const App = () => {
     if (index === -1) return;
     const newCart = [...cartItems];
     cartItems.splice(index, 1);
+    setCartItems(newCart)
   }
 
   return (
